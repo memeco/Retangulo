@@ -22,7 +22,6 @@ namespace CalculoRetangulo
             Console.WriteLine("Perímetro: " + retangulo.CalcularPerimetro().ToString("F2"));
             Console.WriteLine("Diagonal: " + retangulo.CalcularDiagonal().ToString("F2"));
 
-            Console.ReadLine();
         }
     }
 }
