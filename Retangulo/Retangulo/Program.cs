@@ -1,28 +1,28 @@
 ﻿using System;
 
-namespace RetanguloCalculo
+using System;
+
+namespace CalculoRetangulo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            double largura, altura, area, perimetro, diagonal;
-
-            Console.Write("Digite a largura do retângulo: ");
-            largura = double.Parse(Console.ReadLine());
+            double altura, largura;
 
             Console.Write("Digite a altura do retângulo: ");
             altura = double.Parse(Console.ReadLine());
 
-            area = largura * altura;
-            perimetro = 2 * (largura + altura);
-            diagonal = Math.Sqrt(Math.Pow(largura, 2) + Math.Pow(altura, 2));
+            Console.Write("Digite a largura do retângulo: ");
+            largura = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nÁrea = " + area.ToString("F2"));
-            Console.WriteLine("Perímetro = " + perimetro.ToString("F2"));
-            Console.WriteLine("Diagonal = " + diagonal.ToString("F2"));
+            Retangulo retangulo = new Retangulo(altura, largura);
 
-          
+            Console.WriteLine("\nÁrea: " + retangulo.CalcularArea().ToString("F2"));
+            Console.WriteLine("Perímetro: " + retangulo.CalcularPerimetro().ToString("F2"));
+            Console.WriteLine("Diagonal: " + retangulo.CalcularDiagonal().ToString("F2"));
+
+            Console.ReadLine();
         }
     }
 }
