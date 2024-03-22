@@ -1,24 +1,20 @@
 ﻿using System;
+using CalculoRetangulo;
 
-namespace CalculoRetangulo
+namespace ExemploRetangulo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            double altura, largura;
+            // Cria um retângulo usando o construtor sem parâmetros
+            Retangulo retangulo = new Retangulo();
 
-            Console.Write("Digite a altura do retângulo: ");
-            altura = double.Parse(Console.ReadLine());
-
-            Console.Write("Digite a largura do retângulo: ");
-            largura = double.Parse(Console.ReadLine());
-
-            Retangulo retangulo = new Retangulo(altura, largura);
-
-            Console.WriteLine("\nÁrea: " + retangulo.CalcularArea().ToString("F2"));
-            Console.WriteLine("Perímetro: " + retangulo.CalcularPerimetro().ToString("F2"));
-            Console.WriteLine("Diagonal: " + retangulo.CalcularDiagonal().ToString("F2"));
+            // Exibe informações do retângulo
+            Console.WriteLine(retangulo);
+            Console.WriteLine($"Área: {retangulo.CalcularArea()}");
+            Console.WriteLine($"Perímetro: {retangulo.CalcularPerimetro()}");
+            Console.WriteLine($"Diagonal: {retangulo.CalcularDiagonal()}");
         }
     }
 }
